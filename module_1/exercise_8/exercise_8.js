@@ -19,12 +19,10 @@ const end_year = parseInt(prompt('Insert end year.'));
 
 // Calculate and print
 for (let i=start_year; i <= end_year; i++) {
-  if (user_year % 400 === 0) {
-    document.querySelector('#answer').innerHTML = `<li>${i}</li>`;
-  }
-  else if (user_year % 100 === 0) {
-  }
-  else if (user_year % 4 === 0) {
-   document.querySelector('#answer').innerHTML = `<li>${i}</li>`;
+  if (i % 400 === 0) {
+    document.querySelector('#answer').innerHTML += `<li>${i}</li>`;
+  } else if (i % 100 === 0) {
+  } else if (i % 4 === 0) {
+    document.querySelector('#answer').innerHTML += `<li>${i}</li>`;
   }
 }
