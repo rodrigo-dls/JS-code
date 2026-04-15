@@ -131,14 +131,14 @@ for (let pic of picArray) {
     const modalImg = modal.querySelector('img');
     modalImg.src = pic.image.large;
     modalImg.alt = pic.title;
-    modal.appendChild(modalImg);
     modal.showModal();
   })
 }
 
 close_icon.addEventListener('click', function(event) {
-
   modal.close();
+  modal.querySelector('img').src = "";
+  modal.querySelector('img').alt = "";
 })
 
 
